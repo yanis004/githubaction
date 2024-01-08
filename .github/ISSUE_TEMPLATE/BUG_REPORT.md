@@ -1,3 +1,9 @@
+---
+name: Bug report
+about: Help us track issues.
+labels: bug
+---
+
 Your issue may already be reported!
 Please search on the [issue tracker](../) before creating one.
 
