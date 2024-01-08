@@ -16,7 +16,7 @@ Please search on the [issue tracker](../) before creating one.
 <!--- Not obligatory, but suggest a fix/reason for the bug, -->
 <!--- or ideas how to implement the addition or change -->
 
-## Steps to Reproduce (for bugs)
+## Steps to Reproduce
 
 <!--- Provide a link to a live example, or an unambiguous set of steps to -->
 <!--- reproduce this bug. Include code to reproduce, if relevant -->
