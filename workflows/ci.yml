@@ -4,27 +4,25 @@ on:
   push:
     branches: [main]
 
+stages:
+  - validate
+  - test
+  - build
+  - release
+  - deploy
+
 jobs:
   install:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout and Set up Node.js
         uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: '16'
-
-      - name: Cache Node.js modules
-        uses: actions/cache@v2
+      - uses: actions/cache@v2
         with:
-          path: |
-            node_modules
-            .npm
+          path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+      - run: npm ci --cache .npm --prefer-offline
 
-      - name: Install dependencies
-        run: npm ci --cache .npm --prefer-offline
