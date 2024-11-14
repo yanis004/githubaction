@@ -1,0 +1,20 @@
+{
+  "name": "courses-open-source-project-example",
+  "version": "1.0.0",
+  "description": "An open source project example with templates and basic CI / CD pipeline.",
+  "main": "index.js",
+
+  "scripts": {
+    "start": "node src/index.js",
+    "lint": "eslint src --max-warnings=0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.14.0",
+    "eslint": "^9.14.0",
+    "eslint-plugin-react": "^7.37.2",
+    "globals": "^15.12.0"
+  }
+}
